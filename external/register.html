@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPORTEdu | Athlete Registration</title>
+<link rel="stylesheet" href="/external/css/style.css">
+</head>
+
+<body class="dark-theme">
+
+<nav class="navbar">
+    <div class="nav-logo">SPORTEdu</div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="academy.html">Academy</a>
+        <a href="/interact">Interact</a>
+        <a href="#" id="logoutBtn">Logout</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="academy-hero parallax" style="background-image:url('https://images.performgroup.com/di/library/omnisport/78/cd/amad-diallo_jxlxxlpwsvss1odscqri3kmki.png?t=1343564564&w=1200&h=630');">
+    <div class="dark-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">ATHLETE ONBOARDING</h1>
+    </div>
+</section>
+
+<section class="section-padding">
+
+<h1 class="section-title">REGISTRATION FORM</h1>
+
+<form id="registrationForm" class="glass-elite form-grid" novalidate>
+
+<div class="input-wrapper">
+<label>Full Name</label>
+<input type="text" id="fullName">
+<span class="error" id="nameError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>Date of Birth</label>
+<input type="date" id="dob">
+<span class="error" id="dobError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>Age</label>
+<input type="number" id="age" readonly>
+</div>
+
+<div class="input-wrapper">
+<label>Gender</label>
+<select id="gender">
+<option value="" style="color: black;">Select</option>
+<option style="color: black;">Male</option>
+<option style="color: black;">Female</option>
+<option style="color: black;">Other</option>
+</select>
+<span class="error" id="genderError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>Email</label>
+<input type="email" id="regEmail">
+<span class="error" id="regEmailError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>Phone (10 digits)</label>
+<input type="text" id="phone">
+<span class="error" id="phoneError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>Experience Level</label>
+<select id="experience">
+<option value="" style="color: black;">Select</option>
+<option style="color: black;">Beginner (<1 year)</option>
+<option style="color: black;">Intermediate (1-3 years)</option>
+<option style="color: black;">Advanced (3-5 years)</option>
+<option style="color: black;">Elite (>5 years)</option>
+</select>
+<span class="error" id="expError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>Preferred Position</label>
+<select id="position">
+<option value="" style="color: black;">Select</option>
+<option style="color: black;">Forward</option>
+<option style="color: black;">Midfielder</option>
+<option style="color: black;">Defender</option>
+<option style="color: black;">Goalkeeper</option>
+</select>
+<span class="error" id="posError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>Address</label>
+<input type="text" id="address">
+<span class="error" id="addressError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>City</label>
+<input type="text" id="city">
+<span class="error" id="cityError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>State</label>
+<input type="text" id="state">
+<span class="error" id="stateError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>Country</label>
+<input type="text" id="country">
+<span class="error" id="countryError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>Emergency Contact Name</label>
+<input type="text" id="emergencyName">
+<span class="error" id="emergencyNameError"></span>
+</div>
+
+<div class="input-wrapper">
+<label>Emergency Contact Phone</label>
+<input type="text" id="emergencyPhone">
+<span class="error" id="emergencyPhoneError"></span>
+</div>
+
+<div class="input-wrapper full-width">
+<label>Medical Conditions</label>
+<textarea id="medical"></textarea>
+<span class="error" id="medicalError"></span>
+</div>
+
+<div class="full-width center-btn">
+<button type="submit" class="btn-glow">Submit Registration</button>
+</div>
+
+</form>
+
+<div id="registrationSuccess" class="success-message hidden"></div>
+
+</section>
+
+<!-- FEEDBACK SECTION -->
+<section class="section-padding">
+
+<h1 class="section-title">ATHLETE FEEDBACK</h1>
+
+<form id="feedbackForm" class="glass-elite feedback-form" novalidate>
+
+<div class="input-wrapper">
+<label>Your Name</label>
+<input type="text" id="feedbackName">
+<span class="error" id="feedbackNameError"></span>
+</div>
+
+<div class="rating-stars" id="ratingStars">
+<span data-value="1">★</span>
+<span data-value="2">★</span>
+<span data-value="3">★</span>
+<span data-value="4">★</span>
+<span data-value="5">★</span>
+</div>
+<span class="error" id="ratingError"></span>
+
+<div class="input-wrapper full-width">
+<label>Comment</label>
+<textarea id="feedbackComment"></textarea>
+<span class="error" id="commentError"></span>
+</div>
+
+<br/><div class="center-btn">
+<button type="submit" class="btn-glow">Submit Feedback</button>
+</div>
+
+</form>
+
+<div id="feedbackContainer" class="feedback-container"></div>
+
+</section>
+
+<script src="/external/js/script.js"></script>
+
+</body>
+</html>

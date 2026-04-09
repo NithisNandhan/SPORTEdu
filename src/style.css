@@ -1,0 +1,493 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.dark-theme {
+    background: #0f0f0f;
+}
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c8a24c;
+}
+
+
+.hero-section,
+.academy-hero,
+.login-hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dark-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 900px;
+    padding: 20px;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.section-padding {
+    padding: 120px 80px;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.feature-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 60px;
+}
+
+.feature-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* .feature-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+} */
+
+.feature-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.feature-text p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.program-card {
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.4s ease;
+}
+
+.program-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+}
+
+
+.glass-elite {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn-glow {
+    background: #ffffff;
+    color: #000;
+    padding: 14px 30px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 30px;
+}
+
+.btn-glow:hover {
+    background: #c8a24c;
+    box-shadow: 0 0 20px rgba(200,162,76,0.8);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    border-color: #c8a24c;
+    color: #c8a24c;
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.input-wrapper textarea {
+    min-height: 120px;
+}
+
+.error {
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.success-message {
+    text-align: center;
+    font-size: 18px;
+    color: #00ff99;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.quiz-container {
+    margin-bottom: 30px;
+}
+
+.quiz-question {
+    margin-bottom: 25px;
+}
+
+.quiz-question h3 {
+    margin-bottom: 10px;
+}
+
+.quiz-options label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.correct {
+    color: #00ff99;
+}
+
+.incorrect {
+    color: #ff4d4d;
+}
+
+.score-display {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.chat-box {
+    max-width: 700px;
+    margin: auto;
+}
+
+.chat-window {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-user {
+    text-align: right;
+    color: #c8a24c;
+}
+
+.chat-bot {
+    text-align: left;
+    color: #ffffff;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media(max-width: 900px){
+    .feature-block,
+    .feature-block.reverse {
+        flex-direction: column;
+    }
+
+    .section-padding {
+        padding: 100px 30px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+}
+#loginForm {
+    text-align: left;
+}
+
+.remember-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+.remember-container input {
+    margin-right: 8px;
+}
+
+/* Feedback Card Positioning */
+.feedback-card {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Small X Button */
+.delete-x {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+.delete-x:hover {
+    color: #c8a24c;
+    transform: scale(1.2);
+}
+
+.video-module {
+    margin-bottom: 50px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    margin: 20px 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.feature-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.info-ticker {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  color: #00ff99;
+  height: 45px; /* Add a fixed height */
+  display: flex;
+  align-items: center; /* Center text vertically */
+  position: fixed;
+  z-index: 999;
+  top: 80px;
+}
+
+.info-ticker div {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 500;
+  left: 100%; /* Start off-screen to the right */
+  will-change: left; /* Optimization for smoother movement */
+}
+
+/* --- 1. CONTINUOUS FLOATING IMAGES --- */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.feature-image img {
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6); /* Adds depth */
+    transition: transform 0.3s ease;
+}
+
+.feature-image img:hover {
+    animation-play-state: paused;
+    transform: scale(1.03);
+}
+
+/* --- 2. PULSATING CALL TO ACTION --- */
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 10px rgba(200,162,76,0.3); }
+    50% { box-shadow: 0 0 25px rgba(200,162,76,0.8); }
+    100% { box-shadow: 0 0 10px rgba(200,162,76,0.3); }
+}
+
+.btn-glow {
+    animation: pulse-glow 2.5s infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-glow:hover {
+    animation: none;
+    background: #c8a24c;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(200,162,76,1);
+}
+
+/* --- 3. REACTIVE GLASS CARDS --- */
+.glass-elite {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy hover */
+}
+
+.glass-elite:hover {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(200,162,76,0.6); /* Gold border on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+}
+
+/* --- 4. SMOOTH PAGE LOAD FADE --- */
+body {
+    animation: fadeInPage 1s ease-in;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
